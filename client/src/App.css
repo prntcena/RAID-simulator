@@ -1,0 +1,190 @@
+/* General App Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Message Boxes */
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* RAID Controller */
+.raid-controller {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+    border-right: 1px solid #e8e8e8;
+}
+
+.control-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+}
+
+.control-group h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.form-field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.danger-button {
+    background-color: #dc3545;
+}
+
+.danger-button:hover {
+    background-color: #c82333;
+}
+
+/* RAID Visualizer */
+.raid-visualizer {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.raid-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #e8e8e8;
+}
+
+.disks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.disk-card {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.disk-header {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.disk-body {
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.disk-body p {
+    margin: 5px 0;
+}
+
+.read-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: #6c757d;
+}
+
+.read-button:hover {
+    background-color: #5a6268;
+}
+
+/* Status Colors */
+.status-healthy {
+    border-left: 5px solid #28a745;
+}
+.disk-card.status-healthy .disk-header {
+    background-color: #28a745;
+}
+
+.status-failed {
+    border-left: 5px solid #dc3545;
+    background-color: #f8d7da;
+}
+.disk-card.status-failed .disk-header {
+    background-color: #dc3545;
+}
+
+.status-degraded-data-loss {
+    color: #721c24;
+    font-weight: bold;
+}

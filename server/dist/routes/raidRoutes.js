@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const raidController_1 = require("../controllers/raidController");
+const router = (0, express_1.Router)();
+router.post('/create', raidController_1.createRaidArray);
+router.get('/status/:raidId', raidController_1.getRaidStatus);
+router.post('/write', raidController_1.writeToRaid);
+router.post('/simulate-crash', raidController_1.simulateCrash);
+router.post('/replace-disk', raidController_1.replaceDisk);
+router.get('/read-disk/:raidId/:diskIndex', raidController_1.readFromDisk);
+exports.default = router;
